@@ -6,3 +6,8 @@ config SHIELD_HSHS46_LEFT
 
 config SHIELD_HSHS46_RIGHT
     def_bool $(shields_list_contains,hshs46_right)
+
+config ZMK_STUDIO
+    bool "Enable ZMK Studio support"
+    default y
+
