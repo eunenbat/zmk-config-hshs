@@ -1,13 +1,19 @@
-# Copyright (c) 2021-2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
+# Kconfig for hshs46 shield
 
-config SHIELD_HSHS46_LEFT
-    def_bool $(shields_list_contains,hshs46_left)
+menu "HSHS46 Keyboard Shield Configuration"
 
-config SHIELD_HSHS46_RIGHT
-    def_bool $(shields_list_contains,hshs46_right)
+config HSHS46
+    bool "HSHS46 Shield"
+    help
+      Support for the HSHS46 split keyboard using two Nice!Nanos.
 
 config ZMK_STUDIO
     bool "Enable ZMK Studio support"
     default y
+    help
+      Enables ZMK Studio WebUSB support. Required for Studio builds.
+      Make sure your overlays define CONFIG_ZMK_SPLIT_ROLE_CENTRAL and
+      CONFIG_ZMK_SPLIT_ROLE_PERIPHERAL for left/right halves.
 
+endmenu
