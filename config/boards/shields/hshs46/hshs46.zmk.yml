@@ -8,3 +8,59 @@ features:
 siblings:
   - hshs46_left
   - hshs46_right
+physical_layouts:
+  positions:
+    # Left hand - Row 0
+    - {key_positions: [0], width: 1, height: 1, x: 0, y: 0}
+    - {key_positions: [1], width: 1, height: 1, x: 1, y: 0}
+    - {key_positions: [2], width: 1, height: 1, x: 2, y: 0}
+    - {key_positions: [3], width: 1, height: 1, x: 3, y: 0}
+    - {key_positions: [4], width: 1, height: 1, x: 4, y: 0}
+    - {key_positions: [5], width: 1, height: 1, x: 5, y: 0}
+    # Right hand - Row 0
+    - {key_positions: [6], width: 1, height: 1, x: 9, y: 0}
+    - {key_positions: [7], width: 1, height: 1, x: 10, y: 0}
+    - {key_positions: [8], width: 1, height: 1, x: 11, y: 0}
+    - {key_positions: [9], width: 1, height: 1, x: 12, y: 0}
+    - {key_positions: [10], width: 1, height: 1, x: 13, y: 0}
+    - {key_positions: [11], width: 1, height: 1, x: 14, y: 0}
+    # Left hand - Row 1
+    - {key_positions: [12], width: 1, height: 1, x: 0, y: 1}
+    - {key_positions: [13], width: 1, height: 1, x: 1, y: 1}
+    - {key_positions: [14], width: 1, height: 1, x: 2, y: 1}
+    - {key_positions: [15], width: 1, height: 1, x: 3, y: 1}
+    - {key_positions: [16], width: 1, height: 1, x: 4, y: 1}
+    - {key_positions: [17], width: 1, height: 1, x: 5, y: 1}
+    # Right hand - Row 1
+    - {key_positions: [18], width: 1, height: 1, x: 9, y: 1}
+    - {key_positions: [19], width: 1, height: 1, x: 10, y: 1}
+    - {key_positions: [20], width: 1, height: 1, x: 11, y: 1}
+    - {key_positions: [21], width: 1, height: 1, x: 12, y: 1}
+    - {key_positions: [22], width: 1, height: 1, x: 13, y: 1}
+    - {key_positions: [23], width: 1, height: 1, x: 14, y: 1}
+    # Left hand - Row 2
+    - {key_positions: [24], width: 1, height: 1, x: 0, y: 2}
+    - {key_positions: [25], width: 1, height: 1, x: 1, y: 2}
+    - {key_positions: [26], width: 1, height: 1, x: 2, y: 2}
+    - {key_positions: [27], width: 1, height: 1, x: 3, y: 2}
+    - {key_positions: [28], width: 1, height: 1, x: 4, y: 2}
+    - {key_positions: [29], width: 1, height: 1, x: 5, y: 2}
+    - {key_positions: [30], width: 1, height: 1, x: 6, y: 2}
+    # Right hand - Row 2
+    - {key_positions: [31], width: 1, height: 1, x: 8, y: 2}
+    - {key_positions: [32], width: 1, height: 1, x: 9, y: 2}
+    - {key_positions: [33], width: 1, height: 1, x: 10, y: 2}
+    - {key_positions: [34], width: 1, height: 1, x: 11, y: 2}
+    - {key_positions: [35], width: 1, height: 1, x: 12, y: 2}
+    - {key_positions: [36], width: 1, height: 1, x: 13, y: 2}
+    - {key_positions: [37], width: 1, height: 1, x: 14, y: 2}
+    # Left hand - Row 3 (thumb cluster)
+    - {key_positions: [38], width: 1, height: 1, x: 3, y: 3}
+    - {key_positions: [39], width: 1, height: 1, x: 4, y: 3}
+    - {key_positions: [40], width: 1, height: 1, x: 5, y: 3}
+    - {key_positions: [41], width: 1, height: 1, x: 6, y: 3}
+    # Right hand - Row 3 (thumb cluster)
+    - {key_positions: [42], width: 1, height: 1, x: 8, y: 3}
+    - {key_positions: [43], width: 1, height: 1, x: 9, y: 3}
+    - {key_positions: [44], width: 1, height: 1, x: 10, y: 3}
+    - {key_positions: [45], width: 1, height: 1, x: 11, y: 3}
