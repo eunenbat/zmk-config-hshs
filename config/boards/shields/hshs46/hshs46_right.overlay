@@ -20,8 +20,3 @@
         , <&pro_micro 19 GPIO_ACTIVE_HIGH> // col0 in the schematic
         ;
 };
-
-/ {
-    CONFIG_ZMK_SPLIT_ROLE_PERIPHERAL = y;
-    CONFIG_ZMK_STUDIO = y;
-};
