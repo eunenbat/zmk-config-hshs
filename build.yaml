@@ -10,6 +10,11 @@
 #   - board: bdn9_rev2
 #   - board: nice_nano_v2
 #     shield: reviung41
+<<<<<<< HEAD
+=======
+#
+##
+>>>>>>> parent of 052befb (another trivial commit)
 ---
 include:
   - board: nice_nano_v2
