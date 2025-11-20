@@ -10,15 +10,8 @@
 #   - board: bdn9_rev2
 #   - board: nice_nano_v2
 #     shield: reviung41
-#
-##
-#
 ---
 include:
-  - board: nice_nano_v2
-    shield: hshs52_left nice_view_adapter nice_view
-  - board: nice_nano_v2
-    shield: hshs52_right nice_view_adapter nice_view
   - board: nice_nano_v2
     shield: hshs46_left nice_view_adapter nice_view
   - board: nice_nano_v2
