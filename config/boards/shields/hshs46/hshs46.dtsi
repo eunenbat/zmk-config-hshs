@@ -9,7 +9,25 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+    };
+
+    /* Minimal physical-layout node to satisfy ZMK Studio requirements.
+     * Rows and columns mirror the existing matrix-transform (4 rows x 12 columns).
+     * The `keys` array lists physical key positions in row-major order (0..47).
+     * This is a minimal, generic mapping derived from the matrix size and
+     * will allow Studio-enabled builds to proceed. Adjust the `keys` ordering
+     * if you require a different physical labeling.
+     */
+    physical_layout: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        rows = <4>;
+        columns = <12>;
+        keys = <
+            0 1 2 3 4 5 6 7 8 9 10 11
+            12 13 14 15 16 17 18 19 20 21 22 23
+            24 25 26 27 28 29 30 31 32 33 34 35
+            36 37 38 39 40 41 42 43 44 45 46 47
+        >;
     };
 
     default_transform: keymap_transform_0 {
