@@ -20,6 +20,7 @@
      */
     physical_layout: physical_layout_0 {
         compatible = "zmk,physical-layout";
+        display-name = "HSHS46";
         rows = <4>;
         columns = <12>;
         keys = <
