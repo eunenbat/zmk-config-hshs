@@ -15,7 +15,6 @@
         compatible = "zmk,matrix-transform";
         columns = <12>;
         rows = <4>;
-        #key-cells = <1>;
 // | SW1  | SW2  | SW3  | SW4  | SW5  | SW6  |                                   | SW6  | SW5  | SW4  | SW3  | SW2  | SW1  |
 // | SW7  | SW8  | SW9  | SW10 | SW11 | SW12 |                                   | SW12 | SW11 | SW10 | SW9  | SW8  | SW7  |
 // | SW13 | SW14 | SW15 | SW16 | SW17 | SW18 / SW19 /                     \ SW19 \ SW18 | SW17 | SW16 | SW15 | SW14 | SW13 |
@@ -28,7 +27,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5)                   RC(3,6
         >;
     };
 
-    /* physical_layout moved here so &default_transform phandle resolves */
+    /* physical_layout moved here so per-key nodes can be defined after the transform */
     physical_layout: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "HSHS46";
@@ -36,44 +35,70 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5)                   RC(3,6
         columns = <12>;
         transform = <&default_transform>;
 
-        /* Index -> QWERTY label (default_layer) mapping (row-major, rows 0..3, cols 0..11)
-         *
-         * Row 0 (indices 0..11):
-         *   0: GRAVE    1: Q      2: W      3: E      4: R      5: T
-         *   6: Y        7: U      8: I      9: O     10: P     11: BSPC
-         *
-         * Row 1 (indices 12..23):
-         *  12: TAB     13: A     14: S     15: D     16: F     17: G
-         *  18: H      19: J     20: K     21: L     22: SEMI  23: ENTER
-         *
-         * Row 2 (indices 24..35):
-         *  24: LCTRL  25: Z     26: X     27: C     28: V     29: B
-         *  30: ESC   31: CAPS_WORD 32: N   33: M    34: COMMA 35: DOT
-         *
-         * Row 3 (indices 36..47) - thumb / lower row (approximate mapping):
-         *  36: LGUI   37: LALT  38: SK_LSHIFT 39: MO_NAV_L 40: MO_SYM_L 41: SPACE
-         *  42: LALT   43: RGUI  44: SLASH* 45: SQT* 46: (reserved) 47: (reserved)
-         *
-         * Notes:
-         * - This comment block is intended as a human-readable mapping derived
-         *   from the `default_layer` keymap in the keymap file. It is approximate
-         *   for the lower rows because the keymap places some thumb keys across
-         *   fewer physical columns; adjust these labels if you prefer a different
-         *   labeling/ordering for ZMK Studio's UI.
-         * - The actual `keys` property below uses phandle+index entries that
-         *   reference the declared matrix transform. Do not change the phandle
-         *   entries unless you understand the devicetree/phandle model.
-         */
-
-        /* keys must be a mix of phandles and numbers (phandle + index per key)
-         * Use &default_transform followed by the key index (0..47) in row-major order.
+        /* Per-key phandle-only list for ZMK Studio.
+         * Each key is provided as a child node (key@N) below with a simple label.
+         * The `keys` list references those child nodes by phandle so no phandle+index
+         * format is used. This provides clearer labels inside ZMK Studio.
          */
         keys = <
-            &default_transform 0 &default_transform 1 &default_transform 2 &default_transform 3 &default_transform 4 &default_transform 5 &default_transform 6 &default_transform 7 &default_transform 8 &default_transform 9 &default_transform 10 &default_transform 11
-            &default_transform 12 &default_transform 13 &default_transform 14 &default_transform 15 &default_transform 16 &default_transform 17 &default_transform 18 &default_transform 19 &default_transform 20 &default_transform 21 &default_transform 22 &default_transform 23
-            &default_transform 24 &default_transform 25 &default_transform 26 &default_transform 27 &default_transform 28 &default_transform 29 &default_transform 30 &default_transform 31 &default_transform 32 &default_transform 33 &default_transform 34 &default_transform 35
-            &default_transform 36 &default_transform 37 &default_transform 38 &default_transform 39 &default_transform 40 &default_transform 41 &default_transform 42 &default_transform 43 &default_transform 44 &default_transform 45 &default_transform 46 &default_transform 47
+            &key0  &key1  &key2  &key3  &key4  &key5  &key6  &key7  &key8  &key9  &key10 &key11
+            &key12 &key13 &key14 &key15 &key16 &key17 &key18 &key19 &key20 &key21 &key22 &key23
+            &key24 &key25 &key26 &key27 &key28 &key29 &key30 &key31 &key32 &key33 &key34 &key35
+            &key36 &key37 &key38 &key39 &key40 &key41 &key42 &key43 &key44 &key45 &key46 &key47
         >;
+
+        /* Per-key nodes (labels derived from the default QWERTY layer) */
+        key0: key@0  { label = "GRAVE"; };
+        key1: key@1  { label = "Q"; };
+        key2: key@2  { label = "W"; };
+        key3: key@3  { label = "E"; };
+        key4: key@4  { label = "R"; };
+        key5: key@5  { label = "T"; };
+        key6: key@6  { label = "Y"; };
+        key7: key@7  { label = "U"; };
+        key8: key@8  { label = "I"; };
+        key9: key@9  { label = "O"; };
+        key10: key@10 { label = "P"; };
+        key11: key@11 { label = "BSPC"; };
+
+        key12: key@12 { label = "TAB"; };
+        key13: key@13 { label = "A"; };
+        key14: key@14 { label = "S"; };
+        key15: key@15 { label = "D"; };
+        key16: key@16 { label = "F"; };
+        key17: key@17 { label = "G"; };
+        key18: key@18 { label = "H"; };
+        key19: key@19 { label = "J"; };
+        key20: key@20 { label = "K"; };
+        key21: key@21 { label = "L"; };
+        key22: key@22 { label = "SEMI"; };
+        key23: key@23 { label = "ENTER"; };
+
+        key24: key@24 { label = "LCTRL"; };
+        key25: key@25 { label = "Z"; };
+        key26: key@26 { label = "X"; };
+        key27: key@27 { label = "C"; };
+        key28: key@28 { label = "V"; };
+        key29: key@29 { label = "B"; };
+        key30: key@30 { label = "ESC"; };
+        key31: key@31 { label = "CAPS_WORD"; };
+        key32: key@32 { label = "N"; };
+        key33: key@33 { label = "M"; };
+        key34: key@34 { label = "COMMA"; };
+        key35: key@35 { label = "DOT"; };
+
+        key36: key@36 { label = "LGUI"; };
+        key37: key@37 { label = "LALT"; };
+        key38: key@38 { label = "SK_LSHIFT"; };
+        key39: key@39 { label = "MO_NAV_L"; };
+        key40: key@40 { label = "MO_SYM_L"; };
+        key41: key@41 { label = "SPACE"; };
+        key42: key@42 { label = "LALT_2"; };
+        key43: key@43 { label = "RGUI"; };
+        key44: key@44 { label = "SLASH"; };
+        key45: key@45 { label = "SQT"; };
+        key46: key@46 { label = "RESERVED"; };
+        key47: key@47 { label = "RESERVED"; };
     };
 
     kscan0: kscan {
