@@ -48,57 +48,201 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5)                   RC(3,6
         >;
 
         /* Per-key nodes (labels derived from the default QWERTY layer) */
-        key0: key@0  { label = "GRAVE"; };
-        key1: key@1  { label = "Q"; };
-        key2: key@2  { label = "W"; };
-        key3: key@3  { label = "E"; };
-        key4: key@4  { label = "R"; };
-        key5: key@5  { label = "T"; };
-        key6: key@6  { label = "Y"; };
-        key7: key@7  { label = "U"; };
-        key8: key@8  { label = "I"; };
-        key9: key@9  { label = "O"; };
-        key10: key@10 { label = "P"; };
-        key11: key@11 { label = "BSPC"; };
+        key0: key@0 {
+            #key-cells = <0>;
+            label = "GRAVE";
+        };
+        key1: key@1 {
+            #key-cells = <0>;
+            label = "Q";
+        };
+        key2: key@2 {
+            #key-cells = <0>;
+            label = "W";
+        };
+        key3: key@3 {
+            #key-cells = <0>;
+            label = "E";
+        };
+        key4: key@4 {
+            #key-cells = <0>;
+            label = "R";
+        };
+        key5: key@5 {
+            #key-cells = <0>;
+            label = "T";
+        };
+        key6: key@6 {
+            #key-cells = <0>;
+            label = "Y";
+        };
+        key7: key@7 {
+            #key-cells = <0>;
+            label = "U";
+        };
+        key8: key@8 {
+            #key-cells = <0>;
+            label = "I";
+        };
+        key9: key@9 {
+            #key-cells = <0>;
+            label = "O";
+        };
+        key10: key@10 {
+            #key-cells = <0>;
+            label = "P";
+        };
+        key11: key@11 {
+            #key-cells = <0>;
+            label = "BSPC";
+        };
 
-        key12: key@12 { label = "TAB"; };
-        key13: key@13 { label = "A"; };
-        key14: key@14 { label = "S"; };
-        key15: key@15 { label = "D"; };
-        key16: key@16 { label = "F"; };
-        key17: key@17 { label = "G"; };
-        key18: key@18 { label = "H"; };
-        key19: key@19 { label = "J"; };
-        key20: key@20 { label = "K"; };
-        key21: key@21 { label = "L"; };
-        key22: key@22 { label = "SEMI"; };
-        key23: key@23 { label = "ENTER"; };
+        key12: key@12 {
+            #key-cells = <0>;
+            label = "TAB";
+        };
+        key13: key@13 {
+            #key-cells = <0>;
+            label = "A";
+        };
+        key14: key@14 {
+            #key-cells = <0>;
+            label = "S";
+        };
+        key15: key@15 {
+            #key-cells = <0>;
+            label = "D";
+        };
+        key16: key@16 {
+            #key-cells = <0>;
+            label = "F";
+        };
+        key17: key@17 {
+            #key-cells = <0>;
+            label = "G";
+        };
+        key18: key@18 {
+            #key-cells = <0>;
+            label = "H";
+        };
+        key19: key@19 {
+            #key-cells = <0>;
+            label = "J";
+        };
+        key20: key@20 {
+            #key-cells = <0>;
+            label = "K";
+        };
+        key21: key@21 {
+            #key-cells = <0>;
+            label = "L";
+        };
+        key22: key@22 {
+            #key-cells = <0>;
+            label = "SEMI";
+        };
+        key23: key@23 {
+            #key-cells = <0>;
+            label = "ENTER";
+        };
 
-        key24: key@24 { label = "LCTRL"; };
-        key25: key@25 { label = "Z"; };
-        key26: key@26 { label = "X"; };
-        key27: key@27 { label = "C"; };
-        key28: key@28 { label = "V"; };
-        key29: key@29 { label = "B"; };
-        key30: key@30 { label = "ESC"; };
-        key31: key@31 { label = "CAPS_WORD"; };
-        key32: key@32 { label = "N"; };
-        key33: key@33 { label = "M"; };
-        key34: key@34 { label = "COMMA"; };
-        key35: key@35 { label = "DOT"; };
+        key24: key@24 {
+            #key-cells = <0>;
+            label = "LCTRL";
+        };
+        key25: key@25 {
+            #key-cells = <0>;
+            label = "Z";
+        };
+        key26: key@26 {
+            #key-cells = <0>;
+            label = "X";
+        };
+        key27: key@27 {
+            #key-cells = <0>;
+            label = "C";
+        };
+        key28: key@28 {
+            #key-cells = <0>;
+            label = "V";
+        };
+        key29: key@29 {
+            #key-cells = <0>;
+            label = "B";
+        };
+        key30: key@30 {
+            #key-cells = <0>;
+            label = "ESC";
+        };
+        key31: key@31 {
+            #key-cells = <0>;
+            label = "CAPS_WORD";
+        };
+        key32: key@32 {
+            #key-cells = <0>;
+            label = "N";
+        };
+        key33: key@33 {
+            #key-cells = <0>;
+            label = "M";
+        };
+        key34: key@34 {
+            #key-cells = <0>;
+            label = "COMMA";
+        };
+        key35: key@35 {
+            #key-cells = <0>;
+            label = "DOT";
+        };
 
-        key36: key@36 { label = "LGUI"; };
-        key37: key@37 { label = "LALT"; };
-        key38: key@38 { label = "SK_LSHIFT"; };
-        key39: key@39 { label = "MO_NAV_L"; };
-        key40: key@40 { label = "MO_SYM_L"; };
-        key41: key@41 { label = "SPACE"; };
-        key42: key@42 { label = "LALT_2"; };
-        key43: key@43 { label = "RGUI"; };
-        key44: key@44 { label = "SLASH"; };
-        key45: key@45 { label = "SQT"; };
-        key46: key@46 { label = "RESERVED"; };
-        key47: key@47 { label = "RESERVED"; };
+        key36: key@36 {
+            #key-cells = <0>;
+            label = "LGUI";
+        };
+        key37: key@37 {
+            #key-cells = <0>;
+            label = "LALT";
+        };
+        key38: key@38 {
+            #key-cells = <0>;
+            label = "SK_LSHIFT";
+        };
+        key39: key@39 {
+            #key-cells = <0>;
+            label = "MO_NAV_L";
+        };
+        key40: key@40 {
+            #key-cells = <0>;
+            label = "MO_SYM_L";
+        };
+        key41: key@41 {
+            #key-cells = <0>;
+            label = "SPACE";
+        };
+        key42: key@42 {
+            #key-cells = <0>;
+            label = "LALT_2";
+        };
+        key43: key@43 {
+            #key-cells = <0>;
+            label = "RGUI";
+        };
+        key44: key@44 {
+            #key-cells = <0>;
+            label = "SLASH";
+        };
+        key45: key@45 {
+            #key-cells = <0>;
+            label = "SQT";
+        };
+        key46: key@46 {
+            #key-cells = <0>;
+            label = "RESERVED";
+        };
+        key47: key@47 {
+            #key-cells = <0>;
+            label = "RESERVED";
+        };
     };
 
     kscan0: kscan {
