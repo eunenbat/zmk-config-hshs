@@ -10,14 +10,6 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
-        zmk,physical-layout = &physical_layout;
-    };
-
-    physical_layout: physical_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-        kscan = <&kscan0>;
     };
 
     default_transform: keymap_transform_0 {
@@ -50,25 +42,5 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5)                   RC(3,6
 
     };
 
-    /* Add BT keys and system reset nodes for studio keymap */
-    bt_0: bt_0 { label = "BT 0"; };
-    bt_1: bt_1 { label = "BT 1"; };
-    bt_2: bt_2 { label = "BT 2"; };
-    bt_3: bt_3 { label = "BT 3"; };
-    bt_4: bt_4 { label = "BT 4"; };
-    bt_clear: bt_clear { label = "BT CLR"; };
-    sys_reset: sys_reset { label = "RESET"; };
 
 };
-
-&usbd {
-    status = "okay";
-};
-
-/ {
-    zmk,studio {
-        compatible = "zmk,studio";
-    };
-};
-
-
