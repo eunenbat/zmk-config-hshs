@@ -10,3 +10,5 @@ features:
 siblings:
   - hshs46_left
   - hshs46_right
+physical_layout: physical_layout
+
