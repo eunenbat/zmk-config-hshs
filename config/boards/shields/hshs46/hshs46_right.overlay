@@ -6,12 +6,6 @@
 
 #include "hshs46.dtsi"
 
-/ {
-    zmk,studio {
-        keymap = &keymap;   /* Use the full keymap defined in hshs46.keymap */
-    };
-};
-
 &default_transform {
     col-offset = <6>;
 };
