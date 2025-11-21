@@ -56,3 +56,15 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5)                   RC(3,6
 zephyr_udc0: &usbd {
     status = "okay";
 };
+
+/ {
+    zmk,studio {
+        compatible = "zmk,studio";
+        keymap = &keymap0;
+    };
+};
+
+keymap0: keymap {
+    compatible = "zmk,keymap";
+    layers = <&default_layer>;
+};
