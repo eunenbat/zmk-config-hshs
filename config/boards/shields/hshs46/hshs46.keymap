@@ -19,7 +19,7 @@
 #define Paste  LC(V)
 #define Redo   LC(Y)
 
-keymap0: keymap {
+/ {
     compatible = "zmk,keymap";
 
     default_layer {
