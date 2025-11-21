@@ -1,0 +1,15 @@
+/*
+ * SPDX-License-Identifier: MIT
+ *
+ * ZMK Studio overlay for hshs46 keyboard
+ */
+
+#include "hshs46.dtsi"
+
+/ {
+    zmk,studio {
+        compatible = "zmk,studio";
+        keymap = &keymap0;  // points to your keymap node in hshs46.keymap
+    };
+};
+

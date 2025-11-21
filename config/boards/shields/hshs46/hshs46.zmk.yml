@@ -2,9 +2,14 @@ file_format: "1"
 id: hshs46
 name: HSHS46
 type: shield
+# flags: [studio]
 requires: [pro_micro]
 features:
   - keys
+  - studio
 siblings:
   - hshs46_left
   - hshs46_right
+physical_layout: physical_layout
+keymap: keymap0
+
