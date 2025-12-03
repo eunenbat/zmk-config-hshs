@@ -6,7 +6,6 @@
 
 #include "hshs46.dtsi"
 
-// Add this to hshs46_left.overlay
 / {
     chosen {
         zmk,studio-rpc-uart = &cdc_acm_uart;
