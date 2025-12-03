@@ -3,23 +3,19 @@
 
 if SHIELD_HSHS46_LEFT
 
-config ZMK_KEYBOARD_NAME
-    default "HSHS46"
+# Use CONFIG_ prefix and assignment (=) syntax
+CONFIG_ZMK_KEYBOARD_NAME="HSHS46"
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-    default y
+CONFIG_ZMK_SPLIT_BLE_ROLE_CENTRAL=y
 
-config ZMK_STUDIO
-    default y
-
-config ZMK_USB_CDC_ACM
-    default y
+# ZMK Studio settings
+CONFIG_ZMK_STUDIO=y
+CONFIG_ZMK_USB_CDC_ACM=y
 
 endif
 
 if SHIELD_HSHS46_LEFT || SHIELD_HSHS46_RIGHT
 
-config ZMK_SPLIT
-    default y
+CONFIG_ZMK_SPLIT=y
 
 endif
