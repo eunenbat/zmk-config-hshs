@@ -9,6 +9,12 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 
+config ZMK_STUDIO
+    default y
+
+config ZMK_USB_CDC_ACM
+    default y
+
 endif
 
 if SHIELD_HSHS46_LEFT || SHIELD_HSHS46_RIGHT
