@@ -1,0 +1,11 @@
+// config/hshs46_studio.overlay
+
+/ {
+    chosen {
+        // This is the CRITICAL LINE for the BUILD_ASSERT check:
+        zmk,physical-layout = &physical_layout0; 
+
+        // This is the ZMK Studio communication link:
+        zmk,studio-rpc-uart = &cdc_acm_uart;
+    };
+};
