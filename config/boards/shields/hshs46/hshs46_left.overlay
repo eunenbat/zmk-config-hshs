@@ -10,6 +10,7 @@
 / {
     chosen {
         zmk,studio-rpc-uart = &cdc_acm_uart;
+        zmk,physical-layout = &physical_layout0;
     };
 };
 
