@@ -6,12 +6,12 @@
 
 #include "hshs46.dtsi"
 
-/ {
-    chosen {
-        zmk,studio-rpc-uart = &cdc_acm_uart;
-        zmk,physical-layout = &physical_layout0;
-    };
-};
+/* / { */
+/*     chosen { */
+/*         zmk,studio-rpc-uart = &cdc_acm_uart; */
+/*         zmk,physical-layout = &physical_layout0; */
+/*     }; */
+/* }; */
 
 &kscan0 {
     col-gpios
