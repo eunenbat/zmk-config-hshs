@@ -4,16 +4,17 @@
 if SHIELD_HSHS46_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "HSHS46"
+  default "hshs46"
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-    default y
+config ZMK_SPLIT_ROLE_CENTRAL
+  default y
 
 endif
 
 if SHIELD_HSHS46_LEFT || SHIELD_HSHS46_RIGHT
 
 config ZMK_SPLIT
-    default y
+  default y
 
 endif
+
