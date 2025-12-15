@@ -6,13 +6,6 @@
 
 #include "hshs46.dtsi"
 
-/* / { */
-/*     chosen { */
-/*         zmk,studio-rpc-uart = &cdc_acm_uart; */
-/*         zmk,physical-layout = &physical_layout0; */
-/*     }; */
-/* }; */
-
 &kscan0 {
     col-gpios
         = <&pro_micro 19 GPIO_ACTIVE_HIGH> // col0 in the schematic
